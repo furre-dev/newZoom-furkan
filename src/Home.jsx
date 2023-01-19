@@ -12,9 +12,29 @@ import { IoPricetagsOutline } from "react-icons/io5"
 export default function Home() {
 
     const wordArr = ["create", "innovate", "connect"]
+    const [isOpace, setOpace] = useState(false);
 
     const [text, setText] = useState(wordArr[0]);
     const arrLength = wordArr.length;
+
+    let i = 0;
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        if(i === arrLength - 1){
+            i = 0
+        }else{
+            i = i + 1;
+        }
+        setOpace(true)
+        setTimeout(() => {
+            setOpace(false)
+            setText(wordArr[i])
+        }, 280);
+        }, 5000);
+        return () => clearInterval(interval);
+      }, []);
+      
 
     const arrow = ">";
 
@@ -30,9 +50,9 @@ export default function Home() {
 
     return (
         <div>
-            <div className="mt-10 w-[90%] mx-auto mb-8 md:flex md:justify-center md:items-center">
+            <div className="my-10 w-[90%] mx-auto md:flex md:justify-center md:items-center">
                 <div className="space-y-8 md:max-w-[50%]">
-                    <h1 className=" text-4xl md:text-7xl font-lato font-bold max-w-[16rem] md:max-w-[30rem]">One platform to <span className="text-blue-700">
+                    <h1 className=" text-4xl md:text-7xl font-lato font-bold max-w-[16rem] md:max-w-[30rem]">One platform to <span className={`${isOpace?"opacity-0":"opacity-100"} text-blue-700 transition-opacity duration-[280ms] `}>
                         {text}
                     </span></h1>
                     <p className="text-[#00031f] text-lg md:max-w-[30rem]">
@@ -44,13 +64,13 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="md:max-w-[50%] flex justify-center items-center">
-                    <img src="./office.jpeg" className=" mt-12 md:mt-auto rounded-2xl md:rounded-1xl max-w-[90%]
+                    <img alt="Office illustration" src="./office.jpeg" className=" mt-12 md:mt-auto rounded-2xl md:rounded-1xl max-w-[90%]
                     md:max-w-none md:w-full mx-0   h-[20rem] md:h-full object-contain" />
                 </div>
             </div>
 
             <div className="bg-[#00053D] w-full text-white py-5 pb-12 md:flex md:justify-center md:items-center md:h-96 md:mt-20">
-                <img src="https://st2.zoom.us/static/6.3.10815/image/home2/zm-product-wheel.png" className="md:w-[35rem]" />
+                <img alt="Wheel with features for Zoom application" src="https://st2.zoom.us/static/6.3.10815/image/home2/zm-product-wheel.png" className="md:w-[35rem]" />
                 <div className="space-y-5 flex flex-col max-w-[90%] mx-auto">
                     <h2 className="text-4xl font-lato">Make work less work</h2>
                     <p className="font-lato text-blue-300 max-w-[50rem]">
@@ -58,11 +78,11 @@ export default function Home() {
                     <p className="font-sans text-lg cursor-pointer text-gray-300 underline hover:text-blue-300">Discover the Possibilities</p>
                 </div>
             </div>
-            <div className="my-10 max-w-[90%] mx-auto space-y-6 md:flex justify-center items-center">
+            <div className="py-24 max-w-[90%] mx-auto space-y-6 md:flex justify-center items-center">
                 <div className="space-y-6">
-                    <h2 className="text-3xl md:text-4xl font-bold font-lato">Powering organizations across industries and geographies</h2>
-                    <p className="font-lato text-lg text-gray-800">Zoom helps consolidate communications, connect people, and collaborate better together in the boardroom, classroom, operating room, and everywhere in between.</p>
-                    <button className="text-lg bg-[#00E0DB] py-1 px-5 rounded-full  font-thin">Explore Industry Solutions</button>
+                    <h2 className="text-3xl md:text-4xl font-bold font-lato md:max-w-4xl ">Powering organizations across industries and geographies</h2>
+                    <p className="font-lato text-lg text-gray-600 md:max-w-3xl">Zoom helps consolidate communications, connect people, and collaborate better together in the boardroom, classroom, operating room, and everywhere in between.</p>
+                    <button className="text-lg bg-[#00E0DB] py-1 px-5 rounded-full font-lato font-normal">Explore Industry Solutions</button>
                 </div>
                 <div className="flex flex-wrap gap-3 justify-center items-center md:max-w-[30rem]">
                     {cards.map((card) => {

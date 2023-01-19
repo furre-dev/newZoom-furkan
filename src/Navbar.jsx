@@ -2,9 +2,9 @@ import { RxHamburgerMenu } from "react-icons/rx"
 
 export default function Navbar() {
     return (
-        <nav className="flex justify-between items-center p-4 md:px-3 lg:px-12">
+        <nav className="flex justify-between items-center p-4 md:px-3 lg:px-24 border border-b-gray-300">
             <div className="flex space-x-8">
-                <img src='https://st2.zoom.us/static/6.3.10815/image/new/topNav/Zoom_logo.svg' />
+                <img alt="Zoom Logo" src='https://st2.zoom.us/static/6.3.10815/image/new/topNav/Zoom_logo.svg' />
                 <ul className="hidden md:flex space-x-8 text-gray-500 font-medium ">
                     <li><a href="#">Products</a></li>
                     <li><a href="#">Solutions</a></li>
@@ -19,8 +19,8 @@ export default function Navbar() {
                                     hover:bg-[#0C5CFF] hover:text-white">Sign Up Free</button>
             </div>
             <div className="flex space-x-6 items-center md:hidden">
-                <a className="font-lato font-bold text-lg text-blue-800">Join</a>
-                <a className="font-lato font-bold text-lg text-blue-800">Host</a>
+                <a href="#" className="font-lato font-bold text-lg text-blue-800">Join</a>
+                <a href="#" className="font-lato font-bold text-lg text-blue-800">Host</a>
                 <RxHamburgerMenu size={"1.5rem"} color="#31ACFF" />
             </div>
         </nav>
