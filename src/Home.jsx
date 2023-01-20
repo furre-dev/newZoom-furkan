@@ -71,11 +71,11 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="bg-[#00053D] w-full text-white py-5 pb-12 md:flex md:justify-center md:items-center md:h-96 md:mt-20">
+            <div className="bg-[#00053D] w-full text-white py-5 md:px-36 pb-12 md:flex md:justify-center md:items-center md:h-96 md:mt-20">
                 <img alt="Wheel with features for Zoom application" src="https://st2.zoom.us/static/6.3.10815/image/home2/zm-product-wheel.png" className="md:w-[35rem] drop-shadow-" />
                 <div className="space-y-5 flex flex-col max-w-[90%] mx-auto">
-                    <h2 className="text-4xl font-lato">Make work less work</h2>
-                    <p className="font-lato text-blue-300 max-w-[50rem]">
+                    <h2 className="text-4xl md:text-5xl font-lato">Make work less work</h2>
+                    <p className="font-lato text-blue-300 max-w-[50rem] text-lg">
                         Securely connect and collaborate so you can work better together. Simple to manage and delightful to use, Zoom powers the modern workforce.</p>
                     <p className="font-sans text-lg cursor-pointer text-gray-300 underline hover:text-blue-300">Discover the Possibilities</p>
                 </div>
