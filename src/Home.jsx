@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { useState } from "react"
 import Card from "./Card";
 
-import { SlGraduation, SlWallet } from "react-icons/sl"
+import { SlGraduation, SlWallet, SlArrowRight } from "react-icons/sl"
 import { CiBank } from "react-icons/ci"
 import { MdOutlineLocalHospital } from "react-icons/md"
 import { BsBoxSeam } from "react-icons/bs"
 import { IoPricetagsOutline } from "react-icons/io5"
+
 
 
 export default function Home() {
@@ -36,7 +37,6 @@ export default function Home() {
       }, []);
       
 
-    const arrow = ">";
 
 
     const cards = [{ title: "Education", icon: <SlGraduation />, key: 1 },
@@ -47,6 +47,8 @@ export default function Home() {
     { title: "Retail", icon: <IoPricetagsOutline />, key: 6 }
     ]
 
+
+    const arrow = ">";
 
     return (
         <div>
@@ -70,7 +72,7 @@ export default function Home() {
             </div>
 
             <div className="bg-[#00053D] w-full text-white py-5 pb-12 md:flex md:justify-center md:items-center md:h-96 md:mt-20">
-                <img alt="Wheel with features for Zoom application" src="https://st2.zoom.us/static/6.3.10815/image/home2/zm-product-wheel.png" className="md:w-[35rem]" />
+                <img alt="Wheel with features for Zoom application" src="https://st2.zoom.us/static/6.3.10815/image/home2/zm-product-wheel.png" className="md:w-[35rem] drop-shadow-" />
                 <div className="space-y-5 flex flex-col max-w-[90%] mx-auto">
                     <h2 className="text-4xl font-lato">Make work less work</h2>
                     <p className="font-lato text-blue-300 max-w-[50rem]">
