@@ -61,7 +61,7 @@ export default function Home() {
                         Bring teams together, reimagine workspaces, engage new audiences, and delight your customers — all on the Zoom platform you know and love.
                     </p>
                     <div className="flex space-x-10">
-                        <button className="text-lg text-white py-1 px-4 rounded-full bg-[#0C5CFF]" >Plans & Pricing</button>
+                        <button className="text-lg text-white py-1 px-4 rounded-full bg-[#0C5CFF] hover:bg-[#0c10ff]" >Plans & Pricing</button>
                         <button className="text-lg text-[#0C5CFF] flex items-center">Sign Up, It's Free {arrow}</button>
                     </div>
                 </div>
